@@ -1,28 +1,65 @@
 *{
-    background-color: red;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif; 
 }
-h1{
+
+body{
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+.header{
     text-align: center;
+    margin: 30px;
+    
 }
 
 
 .container{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
-    width: 80%;
-    margin: 0 auto;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
+    max-width: 90%;
+    margin: 30px auto;
+    gap: 50px;
+    padding-left: 35px;
 }
 
-.ol{
+.card{
+    border-radius: 12px;
+    background-color: rgba(255,255,255,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    list-style-position: outside;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    /* Elevamos la tarjeta y suavizamos aún más la sombra */
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.info{
+    padding: 15px;
+    display: block;/*para que el h3 no flote "raro"*/
+}
+
+.card h3{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+
+img{
     width: 100%;
-    min-height: 100vw ;
+    height: 250px;
+    display: block;
+    
     
 }
 
-img{
-width: 100%;
-height: 500px;
-}
+
 
